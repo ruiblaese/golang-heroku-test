@@ -16,7 +16,7 @@ func main() {
 	// The request responds to a url matching:  /welcome?firstname=Jane&lastname=Doe
 	router.GET("/welcome", welcome)
 	router.GET("/", welcome)
-	router.Run(port)
+	router.Run(":" + port)
 }
 
 func welcome(c *gin.Context) {
